@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Create account</title>
+    <style>
+      .error_message {
+        display: none;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-side">
+        <div class="back-left">
+          <div class="logo">
+            <img id="odin-logo" src="odin image/odin-lined.png" />
+            <p id="odin-title">ODIN</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div class="intro-text">
+          <h3>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams. Sign up
+            <em>now</em> to get started.
+          </h3>
+          <h3>You <em>know</em> you want to.</h3>
+        </div>
+        <div id="letsdothis">Let's do this!</div>
+        <form onsubmit="validatePasswords(event)">
+          <div class="card">
+            <div class="left-card">
+              <div>
+                <label for="first_name">FIRST NAME</label>
+                <input type="text" id="first_name" name="first_name" />
+              </div>
+              <div>
+                <label for="gmail">GMAIL</label>
+                <input
+                  type="email"
+                  id="gmail"
+                  name="gmail"
+                  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                  required
+                />
+              </div>
+              <div>
+                <label for="password">PASSWORD</label>
+                <input type="password" name="password" id="password" required />
+                <span id="error_message" class="error_message">
+                  Passwords don't match
+                </span>
+              </div>
+            </div>
+
+            <div class="right-card">
+              <div>
+                <label for="last_name">LAST NAME</label>
+                <input type="text" class="last_name" name="last_name" />
+              </div>
+              <div>
+                <label for="phone_number">PHONE NUMBER</label>
+                <input
+                  type="text"
+                  id="phone_number"
+                  name="phone_number"
+                  maxlength="9"
+                />
+              </div>
+              <div>
+                <label for="confirm_password">CONFIRM PASSWORD</label>
+                <input type="password" id="confirm_password" required />
+              </div>
+            </div>
+          </div>
+          <div>
+            <button type="submit">Create Account</button>
+            <br />
+            <p class="footer-text">
+              Already have an account? <a href="#" class="log-in">Log in</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
